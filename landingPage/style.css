@@ -1,9 +1,98 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: red;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.min-h-screen {
-  min-width: 100vh;
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(to right, #f12711, #f5af19),
+    url("../assets/landing-page-template-design-vector.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 900px;
+  color: white;
+  text-align: left;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.nav-links li:not(:last-child)::after {
+  content: "";
+  margin-left: 10px;
+  border-right: 1px dotted white;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f0e5de;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #e1dcd7;
+}
+
+.load-more {
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.load-more:hover {
+  background-color: #004099;
 }
